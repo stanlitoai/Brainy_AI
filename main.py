@@ -33,7 +33,7 @@ def get_gemini_response(input_text, image, prompt):
 
     model = genai.GenerativeModel("gemini-pro-vision")
     # model = model.start_chat(history=[])
-    response = model.generate_content([input_text, image[0], prompt], safety_settings=safety_settings)
+    response = model.generate_content([input_text, image[0], prompt])
     print(response)
     
     return response.text
