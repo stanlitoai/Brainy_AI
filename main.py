@@ -36,7 +36,7 @@ def get_gemini_response(input_text, image, prompt):
     response = model.generate_content([input_text, image[0], prompt],safety_settings=safety_settings)
     # print(response)
     # return response.text
-    return response.text
+    return response
 
 
 
