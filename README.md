@@ -1,4 +1,4 @@
-# PixCrypt GPT
+# Brainy AI
 An AI product for describing product images.
 
 
@@ -14,13 +14,13 @@ An AI product for describing product images.
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/Danselem/pixcrypt.git
+    git clone https://github.com/Stanlito-AI/Brainy_AI.git
     ```
 
 2. Change to the cloned repository directory:
 
     ```bash
-    cd pixcrypt
+    cd Brainy_AI
     ```
 
 3. Create a virtual environment
@@ -49,7 +49,7 @@ An AI product for describing product images.
 1. Run the Streamlit app:
 
     ```bash
-    streamlit run app.py
+    streamlit run main.py
     ```
 
 2. Open a web browser and navigate to `http://localhost:8501` to access the app running inside the container.
