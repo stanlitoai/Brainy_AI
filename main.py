@@ -34,7 +34,15 @@ def get_gemini_response(input_text, image, prompt):
     model = genai.GenerativeModel("gemini-pro-vision")
     # model = model.start_chat(history=[])
     response = model.generate_content([input_text, image[0], prompt], safety_settings=safety_settings)
-    return response.text
+    
+    # response = model.generate_content([input_text, image[0], prompt], safety_settings=safety_settings)
+    # return response.text
+
+    # Check if the response is in the expected format
+    if isinstance(response, dict) and 'text' in response:
+        return response['text']
+    else:
+        raise ValueError("Unexpected response format or missing 'text' attribute")
 
 
 def input_image_setup(uploaded_image):
