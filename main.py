@@ -178,7 +178,7 @@ input_prompt = """
     
         Question:
         
-        response:
+        Solution:
      
     
     Happy extracting!
