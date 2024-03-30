@@ -36,7 +36,10 @@ def get_gemini_response(input_text, image, prompt):
     response = model.generate_content([input_text, image[0], prompt],safety_settings=safety_settings)
     # print(response)
     # return response.text
-    return response
+    # Wrap the generated text in Markdown syntax
+    markdown_response = f"```markdown\n{response.text}\n```"
+    
+    return markdown_response
 
 
 
