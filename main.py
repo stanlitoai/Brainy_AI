@@ -33,10 +33,20 @@ def get_gemini_response(input_text, image, prompt):
 
     model = genai.GenerativeModel("gemini-pro-vision")
     # model = model.start_chat(history=[])
-    response = model.generate_content([input_text, image[0], prompt])
-    print(response)
+    response = model.generate_content([input_text, image[0], prompt],safety_settings=safety_settings)
+    # print(response)
     
-    return response.text
+    # return response.text
+
+     # Check if the response was blocked
+    if response.candidate.safety_ratings:
+        raise ValueError("The response was blocked due to safety concerns. Please try again with different input.")
+    
+    # Check if the response contains a valid Part
+    if response.parts:
+        return response.parts[0].text
+    else:
+        raise ValueError("The response does not contain a valid Part. Please try again.")
 
 
 def input_image_setup(uploaded_image):
