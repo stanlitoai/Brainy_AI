@@ -38,9 +38,10 @@ def get_gemini_response(input_text, image, prompt):
     
     # return response.text
 
-     # Check if the response was blocked
-    if response.candidate.safety_ratings:
+     # Check if the response contains any safety ratings
+    if hasattr(response, 'safety_ratings') and response.safety_ratings:
         raise ValueError("The response was blocked due to safety concerns. Please try again with different input.")
+    
     
     # Check if the response contains a valid Part
     if response.parts:
