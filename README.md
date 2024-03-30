@@ -54,11 +54,6 @@ An AI product for describing product images.
 
 2. Open a web browser and navigate to `http://localhost:8501` to access the app running inside the container.
 
-3. Follow the steps in the Streamlit interface to use PixCrypt GPT.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
