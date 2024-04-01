@@ -52,9 +52,6 @@ An AI product for describing product images.
     streamlit run main.py
     ```
 
-2. Open a web browser and navigate to `http://localhost:8501` to access the app running inside the container.
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
