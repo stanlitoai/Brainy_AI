@@ -31,7 +31,8 @@ def get_gemini_response(input_text, image, prompt):
         }
     ]
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    # model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash-lite")
     # model = model.start_chat(history=[])
     response = model.generate_content([input_text, image[0], prompt],safety_settings=safety_settings)
     # print(response)
@@ -107,7 +108,7 @@ with st.container() as container:
 st.sidebar.header("Brainy AI")
 
 with st.sidebar:
-    st.image("pic.png", use_column_width=True)  # Add your logo here for branding
+    st.image("pic.png", use_container_width=True)  # Add your logo here for branding
     st.markdown(
         """
         ## Welcome to Brainy AI
